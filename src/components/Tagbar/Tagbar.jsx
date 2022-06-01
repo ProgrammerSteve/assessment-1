@@ -23,6 +23,7 @@ const Tagbar=({placeholder:placeholderTxt, index})=>{
         dispatch(actions.studentsBlurTag(index));
     }
 
+    //empty dependency array so it runs once
     useEffect(() => {
         const keyDownHandler = event => {
             if (event.key === 'Enter' && apiList[index].isFocused) {
@@ -30,7 +31,6 @@ const Tagbar=({placeholder:placeholderTxt, index})=>{
                 handleSubmit();
             }
         };
-
         document.addEventListener('keydown', keyDownHandler);
         return () => {
             document.removeEventListener('keydown', keyDownHandler);

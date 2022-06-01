@@ -1,4 +1,5 @@
 import './App.css';
+import React from 'react';
 import {useEffect, useState} from 'react';
 import Card from './components/Card/Card';
 import Searchbar from './components/Searchbar/Searchbar';
@@ -17,14 +18,16 @@ function App() {
   },[dispatch]);
 
   const renderProfile=(List)=>{
-    let elements=[];
-    List.forEach((el,index)=>elements.push(
-      <>
-      <Card key={index} props={el}/>
-      <div className="bottomBorder"></div>
-      </>
-    ));
-    return elements;
+      let elements=[];
+
+
+      List.forEach((el,index)=>{
+        elements.push(<Card key={index} props={el}/>);
+        elements.push(<div key={`div-${index}`} className="bottomBorder"></div>);
+      });
+
+
+      return elements;
   }
 
   const handleNameSearch=(e)=>{
@@ -39,8 +42,8 @@ function App() {
     <div className="backgroundContainer">
       <div className="App">
         <div className='searchContainers'>
-          <Searchbar handler={handleNameSearch} placeholder={`Search by name`}/>
-          <Searchbar handler={handleTagSearch} placeholder={`Search by Tag`}/>
+          <Searchbar key={`NameSearchBar`} handler={handleNameSearch} placeholder={`Search by name`}/>
+          <Searchbar key={`TagSearchBar`} handler={handleTagSearch} placeholder={`Search by Tag`}/>
         </div>
         <div className='profileListContainer'>
         {  

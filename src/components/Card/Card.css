@@ -1,0 +1,178 @@
+.cardContainer{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #EFEFEF;
+
+    margin: 0px auto;
+    /* background-color: red; */
+}
+
+.cardFlexContainer{
+    display: flex;
+    justify-content: start;
+    /* background-color: green; */
+}
+
+.picContainer{
+
+    margin-right: 3em;
+    /* background-color: yellow; */
+}
+.InfoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.plusMinusButton{
+    display: flex;
+    justify-content: end;
+    align-items: start;
+    /* background-color: blue; */
+    
+}
+.plusMinusParagraph{
+    font-size: 50px;
+    font-weight: 900;
+    user-select: none;
+    color:#AAAAAA;
+}
+
+#profilepic{
+    width: 250px;
+    height:250px;
+    border:2px solid #EFEFEF;
+    border-radius: 125px;
+}
+
+.infoText{
+    color:#AAAAAA;
+    font-family: 'Raleway', sans-serif;
+}
+
+.nameText{
+    font-family: 'Raleway', sans-serif;
+    font-size: 3.5em;
+}
+.tagText{
+    color:black;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    padding: 0 auto;
+    /* overflow:hidden; */
+    background-color: #EFEFEF;
+    /* border: 2px solid black; */
+    border-radius: 5px;
+    margin-top: 3px;
+}
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .cardContainer{
+        width: 90%;
+        /* display: flex; */
+        /* justify-content: space-between; */
+        /* padding-bottom: 5px;
+        border-bottom: 2px solid #EFEFEF;
+        margin: 0px auto; */
+        /* background-color: red; */
+    }
+    
+    .cardFlexContainer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+     justify-content: center; 
+        align-items: center;
+        text-align: center;   
+        /* background-color: green; */
+    }
+    
+    .picContainer{
+    
+        /* margin-right: 3em; */
+        margin-inline: auto;
+        /* background-color: yellow; */
+    }
+    .InfoContainer{
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; */
+        /* background-color: red; */
+    }
+    
+    .plusMinusButton{
+        width:0px;
+        /* background-color: blue; */
+        
+    }
+    .plusMinusParagraph{
+        font-size: 50px;
+        font-weight: 900;
+        user-select: none;
+        color:#AAAAAA;
+    }
+    
+    #profilepic{
+        width: 150px;
+        height:150px;
+        border:2px solid #EFEFEF;
+        border-radius: 75px;
+        
+    }
+    
+    .infoText{
+        color:#AAAAAA;
+        font-family: 'Raleway', sans-serif;
+        line-height: 15px;   /* within paragraph */
+
+    }
+    
+    .nameText{
+        font-family: 'Raleway', sans-serif;
+        margin: 5px 0px;
+        font-size: 2.0em;
+    }
+
+    .tagContainer{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+    }
+    .tagText{
+        color:black;
+        text-align: center;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        height: 25px;
+        padding: 0 auto;
+        background-color: #EFEFEF;
+        border-radius: 5px;
+        margin-top: 3px;
+    }
+}
+
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {...} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {...} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {...} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {...} */

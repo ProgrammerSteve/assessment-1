@@ -24,7 +24,12 @@ const Card=({props})=>{
 
     const createGradeList=(grades)=>{
         let elements=[];
-        grades.forEach((grade,index)=>elements.push(<p className="infoText" key={index}>{`Test ${index}: ${grade}%`}</p>));
+        grades.forEach((grade,index)=>elements.push(
+            <tr key={index}>
+                <td className="gradeTest" >{`Test ${index}:`}</td>
+                <td className="gradeText" >{`${grade}%`}</td>
+            </tr>
+            ));
         return elements;
     }
 
@@ -59,17 +64,35 @@ const Card=({props})=>{
                             <p className="infoText">{`Company: ${company}`}</p>
                             <p className="infoText">{`Skill: ${skill}`}</p>
                             <p className="infoText">{`Average: ${getGradeAverage(grades)}%`}</p>
+
+
+
+                            <div className='spacer'></div>
+
+
+                            <div>
+
+                                {toggleGrades
+                                ?
+                                <table className='testContainer'>
+                                    <tbody>{createGradeList(grades)}</tbody>
+                                </table>
+                                :
+                                <></>}
+                            </div>
+
+
                             <div className='tagContainer'>
                                 {toggleGrades?<></>:createTagList(tags)}
                             </div>
+
+
                             <Tagbar 
                                 placeholder={`Add a Tag`}
                                 index={index}
                             />
-                            <div className='spacer'></div>
-                            <div>
-                                {toggleGrades?createGradeList(grades):<></>}
-                            </div>
+                            
+
                         </div>
                 </div>
 

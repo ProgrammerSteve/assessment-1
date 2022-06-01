@@ -1,5 +1,5 @@
 import './App.css';
-import {useEffect, useState, useCallback, useMemo} from 'react';
+import {useEffect, useState} from 'react';
 import Card from './components/Card/Card';
 import Searchbar from './components/Searchbar/Searchbar';
 import{useSelector, useDispatch} from 'react-redux';
@@ -14,13 +14,18 @@ function App() {
 
   useEffect(() => {
     dispatch(getStudents());
-  },[]);
+  },[dispatch]);
 
-  const renderProfile=useCallback((List)=>{
+  const renderProfile=(List)=>{
     let elements=[];
-    List.forEach((el,index)=>elements.push(<Card key={index} props={el}/>));
+    List.forEach((el,index)=>elements.push(
+      <>
+      <Card key={index} props={el}/>
+      <div className="bottomBorder"></div>
+      </>
+    ));
     return elements;
-  },[apiList])
+  }
 
   const handleNameSearch=(e)=>{
     setNameTxt(()=>e.target.value);
@@ -47,7 +52,7 @@ function App() {
                     let NFlag=false;
                     let TLen=tagTxt.split('').length;
                     let NLen=nameTxt.split('').length;
-                    if(TLen==0 && NLen==0){
+                    if(TLen===0 && NLen===0){
                       return true
                     }
                     apiList[index].tags.forEach((tag,ind)=>{
@@ -58,7 +63,7 @@ function App() {
                     if(`${el.firstName} ${el.lastName}`.toLowerCase().includes(nameTxt.toLowerCase())){
                       NFlag=true;
                     }
-                    if((TFlag && NLen==0)||(TLen==0 && NFlag)||(TFlag&&NFlag)){
+                    if((TFlag && NLen===0)||(TLen===0 && NFlag)||(TFlag&&NFlag)){
                       return true;
                     }
                     else{

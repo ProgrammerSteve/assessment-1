@@ -1,32 +1,3 @@
-
-@media (min-width: 600px) {
-    .searchbar{
-        width: 90%;
-        color:black;
-        border:none;
-        border-bottom: 2px solid #EFEFEF;
-        background-color: transparent;
-        resize: none;
-        outline: none;
-        display:inline-block;
-        font-size: 30px;
-        line-height:30px;
-        padding:15px 10px;
-    }
-    .searchbar:focus{
-        width: 90%;
-        color:black;
-        border:none;
-        border-bottom: 2px solid black;
-        background-color: transparent;
-        resize: none;
-        outline: none;
-        display:inline-block;
-        font-size: 30px;
-        line-height:30px;
-        padding:15px 10px;
-    }
-}
 @media (max-width: 600px) {
     .searchbar{
         width: 90%;
@@ -55,7 +26,8 @@
         padding:10px 5px;
     }
 }
-@media (max-width: 768px) {
+
+@media (min-width: 600px) and (max-width: 992px) {
     .searchbar{
         width: 90%;
         color:black;
@@ -65,9 +37,9 @@
         resize: none;
         outline: none;
         display:inline-block;
-        font-size: 25px;
-        line-height:25px;
-        padding:10px 5px;
+        font-size: 20px;
+        line-height:20px;
+        padding:12px 8px;
     }
     .searchbar:focus{
         width: 90%;
@@ -78,8 +50,37 @@
         resize: none;
         outline: none;
         display:inline-block;
-        font-size: 25px;
-        line-height:25px;
-        padding:10px 5px;
+        font-size: 20px;
+        line-height:20px;
+        padding:12px 8px;
+    }
+}
+
+@media (min-width: 992px) {
+    .searchbar{
+        width: 90%;
+        color:black;
+        border:none;
+        border-bottom: 2px solid #EFEFEF;
+        background-color: transparent;
+        resize: none;
+        outline: none;
+        display:inline-block;
+        font-size: 30px;
+        line-height:30px;
+        padding:15px 10px;
+    }
+    .searchbar:focus{
+        width: 90%;
+        color:black;
+        border:none;
+        border-bottom: 2px solid black;
+        background-color: transparent;
+        resize: none;
+        outline: none;
+        display:inline-block;
+        font-size: 30px;
+        line-height:30px;
+        padding:15px 10px;
     }
 }

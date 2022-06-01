@@ -1,102 +1,24 @@
-
+@media (max-width: 600px) {
+    .plusMinusButton{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        width:0px;    
+    }
+    .plusMinusParagraph{
+        font-size: 80px;
+        font-weight: 600;
+        user-select: none;
+        color:#AAAAAA;
+    }
+    .plusMinusParagraph:active{
+        color:black;
+    }
     .cardContainer{
         width: 90%;
         display: flex;
         justify-content: space-between;
-        padding-bottom: 5px;
-        border-bottom: 2px solid #EFEFEF;
         margin: 0px auto;
-    }
-    .cardFlexContainer{
-        display: flex;
-        justify-content: start;
-    }
-    .picContainer{
-        margin-right: 3em;
-    }
-    .InfoContainer{
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
-    }
-    .plusMinusButton{
-        display: flex;
-        justify-content: end;
-        align-items: start;
-    }
-    .plusMinusParagraph{
-        font-family: 'Raleway', sans-serif;
-        font-size: 100px;
-        font-weight: 500;
-        user-select: none;
-        color:#AAAAAA;
-    }
-    #profilepic{
-        width: 250px;
-        height:250px;
-        border:5px solid #EFEFEF;
-        border-radius: 125px;
-    }
-    .infoText{
-        color:#AAAAAA;
-        margin:0px;
-        margin-left:30px;
-        font-family: 'Raleway', sans-serif;
-        font-weight:500;
-        font-size: 1.5em;
-    }
-    .nameText{
-        font-family: 'Raleway', sans-serif;
-        font-weight:700;
-        font-size: 3.5em;
-        margin-bottom: 10px;
-    }
-    .tagText{
-        color:black;
-        text-align: center;
-        display:flex;
-        justify-content: center;
-        padding: 0 auto;
-        background-color: #EFEFEF;
-        border-radius: 5px;
-        margin-top: 3px;
-        margin-left:30px;
-    }
-    .spacer{
-        height: 20px;
-    }
-    .testContainer{
-        width: 40%;
-        margin-left:30px;
-    }
-    .gradeTest{
-        color:black;
-        font-family: 'Raleway', sans-serif;
-        font-weight:500;
-        font-size: 24px;
-        margin: 0px;
-    }
-    .gradeText{
-        color:black;
-        font-family: 'Raleway', sans-serif;
-        font-weight:500;
-        font-size: 24px;
-        margin: 0px;
-    }
-
-
-
-
-
-
-
-
-
-/* Extra small devices (phones, 600px and down) */
-@media (max-width: 600px) {
-    .cardContainer{
-        width: 90%;
     }
     .cardFlexContainer{
         width: 100%;
@@ -108,15 +30,6 @@
     }
     .picContainer{
         margin-inline: auto;
-    }
-    .plusMinusButton{
-        width:0px;    
-    }
-    .plusMinusParagraph{
-        font-size: 80px;
-        font-weight: 600;
-        user-select: none;
-        color:#AAAAAA;
     }
     #profilepic{
         width: 150px;
@@ -156,7 +69,6 @@
         height: 10px;
     }
     .testContainer{
-        width: 40%;
         margin-inline:auto;
     }
     .gradeTest{
@@ -172,194 +84,189 @@
         font-weight:300;
         font-size: 14px;
         margin: 0px;
+        padding-left: 10px;
     }
 }
 
 
-
-@media (min-width: 600px) and(max-width: 768px) {
+@media (min-width: 600px) and (max-width: 992px) {
     .cardContainer{
         width: 90%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0px auto;    
     }
     .cardFlexContainer{
-        width: 100%;
         display: flex;
-        flex-direction: column;
-        justify-content: center; 
-        align-items: center;
-        text-align: center;   
+        justify-content: flex-start;
     }
     .picContainer{
-        margin-inline: auto;
+        margin-right: 3em;
     }
-    .plusMinusButton{
-        width:0px;    
-    }
-    .plusMinusParagraph{
-        font-size: 80px;
-        font-weight: 600;
-        user-select: none;
-        color:#AAAAAA;
+    .InfoContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
     }
     #profilepic{
         width: 150px;
         height:150px;
-        border:2px solid #EFEFEF;
-        border-radius: 75px;  
+        border:5px solid #EFEFEF;
+        border-radius: 75px;
     }
     .infoText{
         color:#AAAAAA;
-        margin:10px 0px;
+        margin:0px;
+        margin-left:30px;
         font-family: 'Raleway', sans-serif;
-        font-weight:300;
-        font-size: 1.2em;
+        font-weight:500;
+        font-size: 1.0em;
     }
     .nameText{
         font-family: 'Raleway', sans-serif;
-        margin: 5px 0px;
-        font-size: 2.4em;
-    }
-    .tagContainer{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        font-weight:700;
+        font-size: 2.6em;
+        margin-bottom: 10px;
     }
     .tagText{
         color:black;
         text-align: center;
         display:flex;
         justify-content: center;
-        align-items: center;
-        height: 35px;
+        padding: 0 auto;
         background-color: #EFEFEF;
         border-radius: 5px;
-        margin:3px 4px;
+        margin-top: 3px;
+        margin-left:30px;
     }
     .spacer{
-        height: 10px;
+        height: 20px;
     }
     .testContainer{
-        width: 40%;
-        margin-inline:auto;
+        margin-left:30px;
     }
     .gradeTest{
         color:black;
         font-family: 'Raleway', sans-serif;
-        font-weight:300;
-        font-size: 17px;
+        font-weight:500;
+        font-size: 19px;
         margin: 0px;
     }
     .gradeText{
         color:black;
         font-family: 'Raleway', sans-serif;
-        font-weight:300;
-        font-size: 17px;
+        font-weight:500;
+        font-size: 19px;
         margin: 0px;
-    }
-}
-
-
-
-
-@media (min-width: 768px) and (max-width: 992px) {
-    .cardContainer{
-        width: 90%;
-    }
-    .cardFlexContainer{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center; 
-        align-items: center;
-        text-align: center;   
-    }
-    .picContainer{
-        margin-inline: auto;
+        padding-left: 14px;
     }
     .plusMinusButton{
-        width:0px;    
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
     }
     .plusMinusParagraph{
+        font-family: 'Raleway', sans-serif;
         font-size: 80px;
-        font-weight: 600;
+        font-weight: 500;
         user-select: none;
         color:#AAAAAA;
     }
+    .plusMinusParagraph:active{
+        color:black;
+    }
+}
+
+    
+    
+@media (min-width: 992px) {
+    .cardContainer{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0px auto;
+    }
+    .cardFlexContainer{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .picContainer{
+        margin-right: 3em;
+    }
+    .InfoContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .plusMinusButton{
+        display: flex;
+        width:100px;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+    .plusMinusParagraph{
+        font-family: 'Raleway', sans-serif;
+        font-size: 100px;
+        font-weight: 500;
+        user-select: none;
+        color:#AAAAAA;
+    }
+    .plusMinusParagraph:active{
+        color:black;
+    }
     #profilepic{
-        width: 150px;
-        height:150px;
-        border:2px solid #EFEFEF;
-        border-radius: 75px;  
+        width: 250px;
+        height:250px;
+        border:5px solid #EFEFEF;
+        border-radius: 125px;
     }
     .infoText{
         color:#AAAAAA;
-        margin:10px 0px;
+        margin:0px;
+        margin-left:30px;
         font-family: 'Raleway', sans-serif;
-        font-weight:300;
-        font-size: 1.4em;
+        font-weight:500;
+        font-size: 1.5em;
     }
     .nameText{
         font-family: 'Raleway', sans-serif;
-        margin: 5px 0px;
-        font-size: 2.8em;
-    }
-    .tagContainer{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        font-weight:700;
+        font-size: 3.5em;
+        margin-bottom: 10px;
     }
     .tagText{
         color:black;
         text-align: center;
         display:flex;
         justify-content: center;
-        align-items: center;
-        height: 35px;
+        padding: 0 auto;
         background-color: #EFEFEF;
         border-radius: 5px;
-        margin:3px 4px;
+        margin-top: 3px;
+        margin-left:30px;
     }
     .spacer{
-        height: 10px;
+        height: 20px;
     }
     .testContainer{
-        width: 50%;
-        margin-inline:auto;
+        margin-left:30px;
     }
     .gradeTest{
         color:black;
         font-family: 'Raleway', sans-serif;
-        font-weight:300;
-        font-size: 20px;
+        font-weight:500;
+        font-size: 24px;
         margin: 0px;
     }
     .gradeText{
         color:black;
         font-family: 'Raleway', sans-serif;
-        font-weight:300;
-        font-size: 20px;
+        font-weight:500;
+        font-size: 24px;
         margin: 0px;
+        padding-left: 18px;
     }
+
 }
-
-
-
-
-
-
-
-
-
-
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media only screen and (min-width: 600px) {...} */
-
-/* Medium devices (landscape tablets, 768px and up) */
-/* @media only screen and (min-width: 768px) {...} */
-
-/* Large devices (laptops/desktops, 992px and up) */
-/* @media only screen and (min-width: 992px) {...} */
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-/* @media only screen and (min-width: 1200px) {...} */

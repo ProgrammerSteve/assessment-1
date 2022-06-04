@@ -1,5 +1,10 @@
 import { createSlice, createAsyncThunk, current } from '@reduxjs/toolkit'
 
+
+// const urlLink=`https://api.hatchways.io/assessment/students`;
+const urlLink=`https://nextapi-programmersteve.vercel.app/api/students`;
+
+
 const initialState = {
     isPending: false,
     apiList: [],
@@ -10,7 +15,7 @@ const initialState = {
 export const getStudents = createAsyncThunk(
   'students/getStudents',
   async (thunkAPI) => {
-    const res = await fetch(`https://api.hatchways.io/assessment/students`)
+    const res = await fetch(urlLink)
     .then((resp) => resp.json())
     .then(data=>{
         return data.students.map((student,ind)=>{

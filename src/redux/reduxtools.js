@@ -1,16 +1,16 @@
 import { createSlice, createAsyncThunk, current } from '@reduxjs/toolkit'
 
-
-// const urlLink=`https://api.hatchways.io/assessment/students`;
 const urlLink=`https://nextapi-programmersteve.vercel.app/api/students`;
 
 
-const initialState = {
+export const initialState = {
     isPending: false,
     apiList: [],
     error: '',
   }
 
+
+  
 // Pulls the students array from the API and adds an index and tags property
 export const getStudents = createAsyncThunk(
   'students/getStudents',
@@ -25,9 +25,15 @@ export const getStudents = createAsyncThunk(
   return res
 })
 
+
+
 export const studentSlice = createSlice({
   name: 'students',
+
+
   initialState,
+
+
   reducers: {
     studentsShowTag: (state, action) =>{
         console.log(current(state.apiList[action.payload].tags))
@@ -42,6 +48,9 @@ export const studentSlice = createSlice({
       state.apiList[action.payload].isFocused=false;
     },
   },
+
+
+
   extraReducers: {
     [getStudents.pending]: (state) => {
       state.isPending = true
